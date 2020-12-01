@@ -1,0 +1,180 @@
+*{margin:0;padding:0;box-sizing:border-box;}  
+
+body {
+    background-color: #fff;
+    color: #222222;
+}
+
+header {
+    background-color: #BBCDE5;
+    padding: 1rem;
+    color: #222222;
+}
+
+input.button {
+    background-color:#1C5D99;
+    border:1px solid #fff;
+    padding: 0.3rem;
+    color:  #fff;
+}
+
+nav {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-color: #000;
+    padding: 2rem;
+    background-color: #BBCDE5;
+}
+
+nav a{
+      text-decoration:none;
+      color:inherit;
+      font-size:14px;
+}
+            
+nav li{
+      display:inline-block;
+      width:150px;
+      height:30px;
+      padding:5px 10px;
+      background-color:#1C5D99;
+      border:1px solid #fff;
+      text-align:center;
+      color:#fff;
+      position:relative;
+}
+            
+nav li:hover{
+      background-color:#639FAB;
+      color:#fff;
+}
+            
+nav li>ul{
+      display:none;
+}
+
+nav li:hover>ul{
+      display:block;
+      position:absolute;
+      top:30px;
+      left:0px;
+}
+
+nav ul li ul li ul li{
+    top: -31px;
+    right: -150px;
+}
+
+nav > form {
+    float: right;
+    margin-top: -1.7rem;
+}
+
+input {
+    text-align: center;
+}
+
+.container {
+    margin: auto;
+    width: 950px;
+}
+
+
+
+.main > h1, h2, h3, p {
+    margin-top: 1rem;
+    margin: 1rem;
+    text-align: justify;
+}
+
+
+footer {
+    text-align: center;
+    background-color: #BBCDE5;
+    padding: 1rem;
+    text-align: center;
+    color: #222222;
+
+}
+
+footer > p {
+    margin: 0;
+}
+
+.paginator {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.paginator > ul > li{
+    list-style:none;
+    display: inline;
+    
+    
+}
+
+.paginator > ul > li > a {
+    text-decoration:none;
+    color: #000;
+    padding: 0.5rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    border: #000 solid 1px;
+}
+
+.paginator > ul > li > a:focus {
+    background-color: #639FAB;
+    color: #fff;
+}
+
+
+footer {
+    bottom: 0;
+    width: 950px;
+}
+
+footer > p {
+    text-align: center;
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .container {
+        width: 750px;
+    }
+    footer {
+        width: 750px;
+    }
+
+
+}
+
+@media only screen and (max-width: 760px) {
+    .container {
+        width: 550px;
+    }
+    footer {
+        width: 550px;
+    }
+
+    
+}
+
+@media only screen and (max-width: 580px) {
+    .container {
+        width: 400px;
+    }
+    footer {
+        width: 400px;
+    }
+    nav > form {
+        float: left;
+        margin-top:0rem;
+    }
+    
+    .paginator {
+        width: 400px;
+    }
+    
+}
