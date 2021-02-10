@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<body>
+ 
+<h2>Àudio amb HTML5</h2>
+  
+<!-- Modifica el següent element -->    
+<audio id="myAudio" controls autoplay>
+    <source src="http://bezerik.es/online/Fluffing_a_Duck.ogg" type="audio/ogg">
+    <source src="http://bezerik.es/online/Fluffing_a_Duck.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+  </audio>
+  <button id="play">REPRODUCIR</button>
+  <button id="pause">PAUSAR</button>
+  <button>SUBIR</button>
+  <button>BAJAR</button>
+<p><strong>Apartat 1</strong><br>Afegiu els canvis necesaris (HTML i CSS) per afegir un clip d'àudio. Les rutes dels arxius són:<ul>
+  <li>Link: <a href="http://bezerik.es/online/Fluffing_a_Duck.mp3">http://bezerik.es/online/Fluffing_a_Duck.mp3</a><br>Type: audio/mpeg.</li>
+  <li>Link: <a href="http://bezerik.es/online/Fluffing_a_Duck.ogg">http://bezerik.es/online/Fluffing_a_Duck.ogg</a><br>Type: audio/ogg.</li>
+  <li>Link: <a href="http://bezerik.es/online/Scheming_Weasel_faster.mp3">http://bezerik.es/online/Scheming_Weasel_faster.mp3</a><br>Type: audio/mpeg.</li>
+  <li>Link: <a href="http://bezerik.es/online/Scheming_Weasel_faster.ogg">http://bezerik.es/online/Scheming_Weasel_faster.ogg</a><br>Type: audio/ogg.</li>
+</ul></p>  
+
+        <p><strong>Apartat 2</strong><br>
+Modifica el audio per a que s'auto-reprodueixi al visitar el web.</p>
+  
+        <p><strong>Apartat 3</strong><br>
+Modifica el audio per a que contingui només dos "sources", El OGG apunti a una cançó i el MP3 a una canço diferent. El OGG no esta suportat per els navegadors Safari i Edge/IE. En canvi el MP3 esta suportat per tots els navegadors. Aixi que visita aquest exercici amb diferents navegadors i comprova quina cançó es reprodueix.</p>
+  
+      <p><strong>Apartat 4</strong><br>
+Afegeix quatre buttons amb el text: "Aturar", "Reproduir", "Pujar volum" i "Baixar volum", just després de l'etiqueta &lt;audio&gt;. Afegeix el JavaScript corresponent per a que aquests quatre buttons interactuin amb el vídeo.</p>
+</body>
+
+<script>
+    //Objeto con referencia a la etiqueta audio     
+    myAudio = document.getElementById("myAudio");
+    //Objeto con referencia al boton play
+    playBtn = document.getElementById("play");
+    //Objeto con referencia al boton pause
+    pauseBtn = document.getElementById("pause");
+    //Objeto con referencia al boton stop
+    stopBtn = document.getElementById("stop");
+
+
+    //Añadiendo funcionalidad a los botones del reproductor
+    playBtn.addEventListener("click", play, true);
+    pauseBtn.addEventListener("click", pause, true);
+    stopBtn.addEventListener("click", stop, true);
+    console.log(myAudio.currentSrc);
+
+    function play(){
+        myAudio.play();
+    }
+    function stop(){
+        myAudio.pause();
+        myAudio.currentTime = 0; 
+    }
+    function pause(){
+        myAudio.pause();
+    }
+    </script>
+
+</html>
