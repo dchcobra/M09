@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<body>
+ 
+<h2>Vídeo amb HTML5</h2>
+  
+<!-- Modifica el següent element -->    
+<video id="myAudio" controls width="600px" poster="https://agora.xtec.cat/iesesteveterradas/wp-content/uploads/usu855/cabecera_web_v2.jpg">
+    <source src="http://techslides.com/demos/sample-videos/small.webm" type="video/webm">
+</video>  
+  <button id="play">reproduir</button>
+  <button id="pause">aturar</button>
+<p><strong>Apartat 1</strong><br>Afegiu els canvis necesaris (HTML i CSS) per afegir un clip de vídeo i que estiguin activitats els controls. Les rutes dels arxius i el seu tipus són:<ul>
+  <li>Link: <a href="http://techslides.com/demos/sample-videos/small.webm">http://techslides.com/demos/sample-videos/small.webm</a><br>Type: video/webm</li>
+  <li>Link: <a href="http://techslides.com/demos/sample-videos/small.ogv">http://techslides.com/demos/sample-videos/small.ogv</a><br>Type: video/ogg</li>
+  <li>Link: <a href="http://techslides.com/demos/sample-videos/small.mp4">http://techslides.com/demos/sample-videos/small.mp4</a><br>Type: video/mp4</li>
+  <li>Link: <a href="http://techslides.com/demos/sample-videos/small.3gp">http://techslides.com/demos/sample-videos/small.3gp</a><br>Type: video/3gp</li>
+  </ul>
+Tingues en compte que els formats MP4 i WEBM són suportats per tots els navegadors, en cavi el format OGG esta suportat per tots excepte Safari.</p>
+
+  <p><strong>Apartat 2</strong><br>
+Afegeix els atributs o característiques necessaries per a que el vídeo tingui una amplada de 600 píxels.</p>
+
+    <p><strong>Apartat 3</strong><br>
+Afegeix la següent imatge <a href="https://agora.xtec.cat/iesesteveterradas/wp-content/uploads/usu855/cabecera_web_v2.jpg">https://agora.xtec.cat/iesesteveterradas/wp-content/uploads/usu855/cabecera_web_v2.jpg</a> com a <a href="https://www.w3schools.com/tags/att_video_poster.asp">poster</a> del vídeo.</p>
+    
+    <p><strong>Apartat 6</strong><br>
+Afegeix dos buttons amb el text: "Aturar" i "Reproduir" just després de l'etiqueta &lt;video&gt;. Afegeix el JavaScript corresponent per a que aquests dos buttons interactuin amb el vídeo.<br>Recordeu que amb JS podeu utilitzar les següents funcions natives que penjen del objecte video:<br>
+<code>.play();<br>.pause();</code></p>
+
+<p><strong>Apartat 7</strong><br>
+Elimina els dos buttons anteriors i en el seu lloc, crea només un button amb el text: "Play/Pause". Afegeix el JavaScript corresponent per a que aquest button interactuin amb el vídeo.<br>Recordeu que amb JS podeu consultar l'estat del vídeo accedint al seu atribut:<br>
+<code>.paused</code></p>
+  
+</body>
+
+<script>
+    //Objeto con referencia a la etiqueta audio     
+    myAudio = document.getElementById("myAudio");
+    //Objeto con referencia al boton play
+    playBtn = document.getElementById("play");
+    //Objeto con referencia al boton pause
+    pauseBtn = document.getElementById("pause");
+    //Objeto con referencia al boton stop
+    stopBtn = document.getElementById("stop");
+
+
+    //Añadiendo funcionalidad a los botones del reproductor
+    playBtn.addEventListener("click", play, true);
+    pauseBtn.addEventListener("click", pause, true);
+    stopBtn.addEventListener("click", stop, true);
+    console.log(myAudio.currentSrc);
+
+    function play(){
+        myAudio.play();
+    }
+    function stop(){
+        myAudio.pause();
+        myAudio.currentTime = 0; 
+    }
+    function pause(){
+        myAudio.pause();
+    }
+    </script>
+</html>
