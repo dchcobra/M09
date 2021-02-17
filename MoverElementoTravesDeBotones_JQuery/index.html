@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="main.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    </head>
+<body>
+  
+<h2>Animacions jQuery</h2>  
+<div id="controls">
+  <button id="top">&#8593;</button>
+  <button id="left">&#8592;</button>
+  <button id="right">&#8594;</button>
+  <button id="bottom">&#8595;</button>
+</div>
+  
+<div id="box1"></div>
+
+  
+</body>
+
+<script>
+    $(document).ready(function() {
+        $('#top').click(function() {
+            $( '#box1' ).animate({
+                top: '-100'
+            }, 1000 );
+        });
+    })
+
+    $(document).ready(function() {
+        $('#bottom').click(function() {
+            $( '#box1' ).animate({
+                bottom: '-100'
+            }, 1000 );
+        });
+    })
+
+    $(document).ready(function() {
+        $('#right').click(function() {
+            $( '#box1' ).animate({
+                right: '-100'
+            }, 1000 );
+        });
+    })
+
+    $(document).ready(function() {
+        $('#left').click(function() {
+            $( '#box1' ).animate({
+                left: '-100'
+            }, 1000 );
+        });
+    })
+
+</script>
+
+</html>
