@@ -1,0 +1,37 @@
+body {
+    padding: 25px;
+    font-size: 25px;
+  }
+  .box {
+    width: 150px;
+    height: 150px;
+    background: silver;
+    margin: 15px 0;
+  }
+  .container {
+    width: 300px;
+    height: 300px;
+    border: 4px dotted grey;
+    margin: 15px 0;
+  }
+  div#box1 {
+    background: red;
+  }
+  div#box2 {
+    background: green;
+    float: left;
+  }
+  div#container2 {
+    float: left;
+    margin: 0 0 0 15px;
+  }
+  div#box3 {
+    clear: both;
+    background: orange;
+  }
+  li {
+    border: 1px solid grey;
+    margin: 5px 0;
+    padding: 10px;
+  }
+  

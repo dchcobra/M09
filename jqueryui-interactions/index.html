@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <head>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+    <style>
+        #llista1 .ui-selecting { background: #FECA40; }
+        #llista1 .ui-selected { background: #F39814; color: white; }
+    </style>
+ </head>
+  
+<h2>jQuery UI - Interaccions</h2>  
+ 
+<div id="box1" class="box"></div>
+  
+<div>
+  <div id="box2" class="box"></div>
+  <div id="container2" class="container">
+      <p></p>
+  </div>
+</div>
+  
+<div id="box3" class="box"></div>
+
+<h2>Llista 1</h2>
+<ol id="llista1">
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+  <li>Item 4</li>
+  <li>Item 5</li>
+  <li>Item 6</li>
+  <li>Item 7</li>
+</ol>
+
+<h2>Llista 2</h2>
+<ol id="llista2">
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+  <li>Item 4</li>
+  <li>Item 5</li>
+  <li>Item 6</li>
+  <li>Item 7</li>
+</ol>
+  
+</body>
+
+<script>
+    $( document ).ready(function() {
+        $('#box1').draggable();
+
+        $('#box2').draggable();
+        $('#container2').droppable({
+        drop: function( event, ui ) {
+            $( this )
+            .addClass( "ui-state-highlight" )
+            .find( "p" )
+                .html( "Dropped!" );
+        }
+        });
+
+        $("#box3").resizable();
+        $("#llista1").selectable();
+        $("#llista2").sortable();
+
+
+    });
+</script>
+</html>

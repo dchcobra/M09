@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<body>
+<head>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+    <style>
+        #llista1 .ui-selecting { background: #FECA40; }
+        #llista1 .ui-selected { background: #F39814; color: white; }
+    </style>
+</head>
+<h2>jQuery UI - Widgets</h2>  
+ 
+  
+<div id="container1">
+  <h3>Section 1</h3>
+  <div>
+    <p>
+      Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer.</p>
+    <label for="tags">Tags: </label>
+    <input id="tags"><br>
+    <p>Date: <input type="text" id="data_naixament"></p>
+  </div>
+  <h3>Section 2</h3>
+  <div class="widget">
+    <p>
+    Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+    purus.</p>
+  
+  <button>A button element</button>
+  <input type="submit" value="A submit button">
+  <a href="#">An anchor</a>
+  </div>
+  <h3>Section 3</h3>
+  <div class="check">
+    <p>
+    Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.</p>
+    
+  <h4>Radio Group</h4>
+  <fieldset>
+    <legend>Select a Location: </legend>
+    <label for="radio-1">New York</label>
+    <input type="radio" name="radio-1" id="radio-1">
+    <label for="radio-2">Paris</label>
+    <input type="radio" name="radio-1" id="radio-2">
+    <label for="radio-3">London</label>
+    <input type="radio" name="radio-1" id="radio-3">
+  </fieldset>
+
+  </div>
+  <h3>Section 4</h3>
+  <div>
+    <p>
+    Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+    purus.</p>
+  <fieldset>
+    <legend>Rental Car</legend>
+    <div class="controlgroup">
+      <select id="car-type">
+        <option>Compact car</option>
+        <option>Midsize car</option>
+        <option>Full size car</option>
+        <option>SUV</option>
+        <option>Luxury</option>
+        <option>Truck</option>
+        <option>Van</option>
+      </select>
+      <label for="transmission-standard">Standard</label>
+      <input type="radio" name="transmission" id="transmission-standard">
+      <label for="transmission-automatic">Automatic</label>
+      <input type="radio" name="transmission" id="transmission-automatic">
+      <label for="insurance">Insurance</label>
+      <input type="checkbox" name="insurance" id="insurance">
+      <label for="horizontal-spinner" class="ui-controlgroup-label"># of cars</label>
+      <input id="horizontal-spinner" class="ui-spinner-input">
+      <button>Book Now!</button>
+    </div>
+  </fieldset>
+  </div>
+</div>
+  
+<script>
+    $( document ).ready(function() {
+        $('#container1').accordion();
+
+        var Nombres = ['carles', 'joan', 'maria', 'rosa', 'mariona', 'jordi', 'lluis', 'marta', 'sandra', 'arnau', 'nil']
+
+        $('#tags').autocomplete({
+            source: Nombres
+        });
+
+        $( ".widget input[type=submit], .widget a, .widget button" ).button();
+        $( "button, input, a" ).click( function( event ) {
+            zevent.preventDefault();
+        } );
+
+        $( ".check input" ).checkboxradio();
+
+        $("div.controlgroup").controlgroup();
+
+    });
+</script>
+  
+  
+  
+</body>
+</html>
